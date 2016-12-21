@@ -53,10 +53,7 @@ public class InicioSesion extends AppCompatActivity {
         final EditText user =(EditText) findViewById(R.id.user);
         final EditText pass =(EditText) findViewById(R.id.pass);
         String p=pass.getText().toString();
-        if (user.getText().toString().equals("")||pass.toString().equals("")){
-            Toast.makeText(getApplicationContext(),"Algun campo está en blanco",Toast.LENGTH_SHORT).show();
-        }
-        else {
+
             JSONObject jsonParams = new JSONObject();
             jsonParams.put("nom", user.getText().toString());
             jsonParams.put("contra", pass.getText().toString());
@@ -84,16 +81,14 @@ public class InicioSesion extends AppCompatActivity {
 
                         }
                     });
-        }
+
     }
 
     public void registro (View v) throws JSONException, UnsupportedEncodingException {
         final TextView user =(TextView) findViewById(R.id.user);
         final TextView pass =(TextView) findViewById(R.id.pass);
-        if (user.getText().toString().equals("")||pass.toString().equals("")){
-            Toast.makeText(getApplicationContext(),"Algun campo está en blanco",Toast.LENGTH_SHORT).show();
-        }
-        else {
+
+
             JSONObject jsonParams = new JSONObject();
             jsonParams.put("nom", user.getText().toString());
             jsonParams.put("contra", pass.getText().toString());
@@ -121,6 +116,6 @@ public class InicioSesion extends AppCompatActivity {
 
                         }
                     });
-        }
+
     }
 }
